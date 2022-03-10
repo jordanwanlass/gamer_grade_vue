@@ -50,7 +50,7 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   body {
     display: flex;
     place-items: center;
@@ -77,5 +77,5 @@ a,
   .logo {
     margin: 0 2rem 0 0;
   }
-}
+} */
 </style>
