@@ -2,11 +2,12 @@
   "name": "gamer_grade_vue",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 8080",
     "build": "vite build",
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "bootstrap": "^5.1.3",
     "bootstrap-vue": "^2.21.2",
     "vue": "^3.2.31"
