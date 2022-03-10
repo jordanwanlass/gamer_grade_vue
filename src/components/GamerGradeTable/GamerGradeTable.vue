@@ -6,49 +6,12 @@ export default {
   data() {
     return {
         items: null
-    //   items: [
-    //     {
-    //       id: id++,
-    //       championName: "Jhin",
-    //       kills: 9,
-    //       assists: 3,
-    //       deaths: 4,
-    //       kda: 1.3,
-    //     },
-    //     {
-    //       id: id++,
-    //       championName: "Jhin",
-    //       kills: 3,
-    //       assists: 3,
-    //       deaths: 4,
-    //       kda: 1.3,
-    //     },
-    //     {
-    //       id: id++,
-    //       championName: "Jhin",
-    //       kills: 4,
-    //       assists: 3,
-    //       deaths: 4,
-    //       kda: 1.3,
-    //     },
-    //     {
-    //       id: id++,
-    //       championName: "Jhin",
-    //       kills: 10,
-    //       assists: 3,
-    //       deaths: 4,
-    //       kda: 1.3,
-    //     },
-    //   ]
     };
   },
   components: { GamerGradeTableItem },
   mounted() {
-      var config = {
-    headers: {'Access-Control-Allow-Origin': '*'}
-};
     axios
-      .get("http://localhost:3000/api/v1/matches/", config)
+      .get("http://localhost:3000/api/v1/matches?puuid=" + encodeURIComponent(localStorage.getItem("puuid")))
       .then((response) => (
           this.items = response.data
           ));
